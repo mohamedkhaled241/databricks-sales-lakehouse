@@ -24,9 +24,21 @@ The project uses CSV files containing sales, customer, product, and location inf
 - Data Warehousing
 
 ## Data Warehouse
-The Gold layer contains a sales fact table and dimension tables for analytical reporting.
 
-The fact table stores sales measures and transaction dates, while the dimension tables provide descriptive information about customers, products, and locations.
+The Gold layer contains a sales fact table and dimension tables for customers, products, and locations.
+
+### Fact Table Grain
+
+The sales fact table is designed at the **order-line level**, where each row represents a specific product within an order.
+
+An order containing multiple products is represented by multiple rows, one for each product line. This grain supports detailed sales analysis by order, product, customer, and location.
+
+The fact table stores measures such as sales amount and quantity, along with transaction dates and keys used to connect to the dimension tables.
+
+### Dimension Tables
+
+The dimension tables provide descriptive attributes for customers, products, and locations, enabling multidimensional sales analysis.
+
 
 ## Data Transformations
 The pipeline includes:
@@ -38,8 +50,18 @@ The pipeline includes:
 - Fact and dimension table preparation
 
 ## Repository Structure
-- `bike_lakehouse/` — Project notebooks and supporting files
-- `sample_data/` — Sample CSV source data, if organized separately
+
+- `bike_lakehouse/` — Main project directory
+- `crm_cust_info/` — Customer data processing notebooks
+- `crm_prd_info/` — Product data processing notebooks
+- `crm_sales_info/` — Sales data processing notebooks
+- `rep_loc_info/` — Location data processing notebooks
+- `Gold_fact_sales.csv` — Exported Gold fact table
+- `sales_details.csv` — Sales source data
+- `cust_info.csv` — Customer source data
+- `prd_info.csv` — Product source data
+- `LOC_A101.csv` — Location source data
+
 
 ## How to Run
 1. Clone or download this repository.
