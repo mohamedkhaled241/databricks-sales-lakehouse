@@ -10,6 +10,10 @@ The project follows the Medallion Architecture:
 - **Silver Layer:** Cleans and transforms the data, standardizes data types, handles key inconsistencies, and prepares the datasets for integration.
 - **Gold Layer:** Builds analytical fact and dimension tables to support reporting and business analysis.
 
+- ## Architecture Diagram
+
+![Databricks Sales Lakehouse Architecture](architecture.png)
+
 ## Data Sources
 The project uses CSV files containing sales, customer, product, and location information.
 
