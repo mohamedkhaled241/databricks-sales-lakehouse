@@ -39,6 +39,22 @@ An order containing multiple products is represented by multiple rows, one for e
 
 The fact table stores measures such as sales amount and quantity, along with transaction dates and keys used to connect to the dimension tables.
 
+## Gold Layer Results
+
+The Gold layer contains the following analytical tables:
+
+| Table | Row Count |
+|---|---:|
+| `fact_sales` | 60,398 |
+| `dim_product` | 295 |
+| `dim_customers` | 18,484 |
+| `dim_location` | 18,484 |
+
+These tables provide the foundation for analyzing sales transactions across products, customers, and locations.
+
+*Row counts were collected from the Databricks Gold tables.*
+
+
 ### Dimension Tables
 
 The dimension tables provide descriptive attributes for customers, products, and locations, enabling multidimensional sales analysis.
