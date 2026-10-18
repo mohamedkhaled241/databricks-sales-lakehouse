@@ -12,7 +12,7 @@ The project follows the Medallion Architecture:
 
 - ## Architecture Diagram
 
-![Databricks Sales Lakehouse Architecture](architecture.png)
+![Databricks Sales Lakehouse Architecture](bike_lakehouse/architecture.png)
 
 ## Data Sources
 The project uses CSV files containing sales, customer, product, and location information.
